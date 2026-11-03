@@ -31,7 +31,7 @@ El HTML y el CSS ya están hechos para que te centres en JavaScript. Pero es **t
 
 | Paso | Qué haces | Qué repasas |
 |---|---|---|
-| 2.1 | `obtenerTecnologias()` → lista sin repetir | Módulo 06, ejercicio 8 |
+| 2.1 | `obtenerTecnologias()` → lista sin repetir | Módulo 06, ejercicio 7 |
 | 2.2 | `filtrarProyectos()` → aplica filtro y búsqueda | `filter`, `includes` |
 | 2.3 | `pintarFiltros()` → botones de tecnologías | Eventos |
 | 2.4 | `activarBuscador()` → buscar mientras escribes | Evento `input` |

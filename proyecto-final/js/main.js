@@ -79,7 +79,8 @@ function pintarHabilidades() {
 // 1.6 · Carga los proyectos de 'data/proyectos.json' con fetch
 // y devuelve el array.
 // Si algo falla: muéstralo en la consola (console.error) y devuelve [].
-// Pista: mira el apartado fetch del README del módulo 08.
+// Pista: el ejemplo de fetch del README del módulo 08 es casi igual.
+//        Cópialo, adáptalo y rodéalo de un try / catch (como el ejercicio 2 del módulo 08).
 // -------------------------------------------------------------
 async function cargarProyectos() {
   // Escribe tu código aquí
@@ -107,6 +108,10 @@ async function cargarProyectos() {
 // Pista: crea el <article> con createElement y rellénalo con innerHTML
 // y una plantilla `...`. (innerHTML es seguro aquí porque los datos son tuyos;
 // nunca lo uses con texto que escriba un usuario).
+// Pista: las etiquetas salen de convertir el array en texto:
+//        proyecto.tecnologias.map((tecnologia) => `<li>${tecnologia}</li>`).join('')
+// Pista: para poner algo solo si existe, usa el ternario dentro de la plantilla:
+//        ${proyecto.demo ? `<a href="${proyecto.demo}">Ver demo</a>` : ''}
 // -------------------------------------------------------------
 function crearTarjetaProyecto(proyecto) {
   // Escribe tu código aquí
@@ -136,7 +141,7 @@ function actualizarProyectos() {
 
 // -------------------------------------------------------------
 // 2.1 · Devuelve todas las tecnologías de los proyectos, sin repetir
-// y ordenadas. ¡Es el ejercicio 8 del módulo 06!
+// y ordenadas. ¡Es el ejercicio 7 del módulo 06!
 //   ['CSS', 'HTML', 'JSON', 'JavaScript', 'Node']
 // -------------------------------------------------------------
 function obtenerTecnologias(proyectos) {

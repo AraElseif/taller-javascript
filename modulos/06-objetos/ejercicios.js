@@ -30,18 +30,7 @@ export function presentar(persona) {
 }
 
 // -------------------------------------------------------------
-// Ejercicio 3 · Cumplir años
-// Devuelve un objeto NUEVO igual que la persona, pero con un año más.
-// ¡No modifiques el objeto original!
-//   cumplirAnios({ nombre: 'Ada', edad: 36 }) → { nombre: 'Ada', edad: 37 }
-// Pista: spread { ...persona }
-// -------------------------------------------------------------
-export function cumplirAnios(persona) {
-  // Escribe tu código aquí
-}
-
-// -------------------------------------------------------------
-// Ejercicio 4 · Contar propiedades
+// Ejercicio 3 · Contar propiedades
 // Devuelve cuántas propiedades tiene el objeto.
 //   contarPropiedades({ a: 1, b: 2, c: 3 }) → 3
 // -------------------------------------------------------------
@@ -50,7 +39,7 @@ export function contarPropiedades(objeto) {
 }
 
 // -------------------------------------------------------------
-// Ejercicio 5 · Solo los títulos
+// Ejercicio 4 · Solo los títulos
 // Recibes un array de proyectos. Devuelve un array con sus títulos.
 //   titulos(proyectosDeEjemplo) → ['Calculadora', 'Blog personal', 'Lista de tareas']
 // -------------------------------------------------------------
@@ -59,7 +48,7 @@ export function titulos(proyectos) {
 }
 
 // -------------------------------------------------------------
-// Ejercicio 6 · Filtrar por tecnología
+// Ejercicio 5 · Filtrar por tecnología
 // Devuelve los proyectos que usan la tecnología indicada.
 //   filtrarPorTecnologia(proyectosDeEjemplo, 'CSS') → [ {Calculadora…}, {Blog personal…} ]
 // -------------------------------------------------------------
@@ -68,7 +57,7 @@ export function filtrarPorTecnologia(proyectos, tecnologia) {
 }
 
 // -------------------------------------------------------------
-// Ejercicio 7 · Buscar por id
+// Ejercicio 6 · Buscar por id
 // Devuelve el proyecto con ese id, o null si no existe.
 //   buscarPorId(proyectosDeEjemplo, 2)  → { id: 2, titulo: 'Blog personal', … }
 //   buscarPorId(proyectosDeEjemplo, 99) → null
@@ -79,13 +68,24 @@ export function buscarPorId(proyectos, id) {
 }
 
 // -------------------------------------------------------------
-// Ejercicio 8 · Todas las tecnologías
+// Ejercicio 7 · Todas las tecnologías
 // Devuelve la lista de tecnologías usadas en los proyectos,
 // sin repetir y ordenadas alfabéticamente.
 //   tecnologiasUnicas(proyectosDeEjemplo) → ['CSS', 'HTML', 'JavaScript']
 // Pista: flatMap + new Set + sort
 // -------------------------------------------------------------
 export function tecnologiasUnicas(proyectos) {
+  // Escribe tu código aquí
+}
+
+// -------------------------------------------------------------
+// Ejercicio 8 · Cumplir años (extra)
+// Devuelve un objeto NUEVO igual que la persona, pero con un año más.
+// ¡No modifiques el objeto original!
+//   cumplirAnios({ nombre: 'Ada', edad: 36 }) → { nombre: 'Ada', edad: 37 }
+// Pista: spread { ...persona }
+// -------------------------------------------------------------
+export function cumplirAnios(persona) {
   // Escribe tu código aquí
 }
 

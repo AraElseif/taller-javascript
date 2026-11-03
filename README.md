@@ -9,6 +9,7 @@ Cada módulo tiene una teoría exprés con ejemplos y unos ejercicios que se **c
 | Bloque | Qué vas a aprender |
 |---|---|
 | Preparación | Tu copia del repo, Node y tu primer test |
+| [00 · Primeros pasos](modulos/00-primeros-pasos/) | La terminal, VS Code, tu primer programa y cómo leer los errores |
 | [01 · Variables, tipos y operadores](modulos/01-variables-y-tipos/) | `let`, `const`, textos, números, booleanos |
 | [02 · Condicionales](modulos/02-condicionales/) | `if`, `else`, `switch`, `&&`, `\|\|` |
 | [03 · Bucles](modulos/03-bucles/) | `for`, `while`, `for...of` |
@@ -72,6 +73,10 @@ git --version
 
 > No hace falta `npm install`: el taller no tiene dependencias.
 
+> **¿Es tu primera vez con la terminal?** Empieza por [00 · Primeros pasos](modulos/00-primeros-pasos/).
+>
+> **¿Problemas con Git?** En GitHub pulsa **Code → Download ZIP**, descomprímelo y ábrelo con VS Code. Podrás hacer todo el taller, aunque no podrás subir tus cambios a GitHub.
+
 ---
 
 ## Cómo se trabaja en cada módulo
@@ -104,6 +109,7 @@ git --version
 ```
 taller-javascript/
 ├── modulos/
+│   ├── 00-primeros-pasos/      ← la terminal, VS Code y cómo leer errores
 │   ├── 01-variables-y-tipos/   ← README.md (teoría) + ejercicios.js (tu código) + tests
 │   ├── 02-condicionales/
 │   ├── …

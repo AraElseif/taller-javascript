@@ -9,17 +9,7 @@ import { obtenerUsuario, obtenerPosts } from './api-falsa.js';
 // Cualquier otro id → la promesa se rechaza con un Error.
 
 // -------------------------------------------------------------
-// Ejercicio 1 · Esperar
-// Devuelve una PROMESA que se resuelva pasados `ms` milisegundos.
-//   await esperar(1000);  // espera un segundo
-// Pista: new Promise((resolve) => setTimeout(…))
-// -------------------------------------------------------------
-export function esperar(ms) {
-  // Escribe tu código aquí
-}
-
-// -------------------------------------------------------------
-// Ejercicio 2 · Nombre de usuario
+// Ejercicio 1 · Nombre de usuario
 // Usa obtenerUsuario(id) y devuelve SOLO el nombre.
 //   await nombreDeUsuario(1) → 'Ada Lovelace'
 // Pista: la función ya es async. Te falta un await.
@@ -29,7 +19,7 @@ export async function nombreDeUsuario(id) {
 }
 
 // -------------------------------------------------------------
-// Ejercicio 3 · Si falla, 'Anónimo'
+// Ejercicio 2 · Si falla, 'Anónimo'
 // Igual que el anterior, pero si el usuario no existe devuelve 'Anónimo'.
 //   await nombreOAnonimo(2)  → 'Alan Turing'
 //   await nombreOAnonimo(99) → 'Anónimo'
@@ -40,7 +30,7 @@ export async function nombreOAnonimo(id) {
 }
 
 // -------------------------------------------------------------
-// Ejercicio 4 · Contar posts
+// Ejercicio 3 · Contar posts
 // Devuelve cuántos posts ha escrito un usuario.
 //   await contarPosts(3) → 3
 // -------------------------------------------------------------
@@ -49,7 +39,17 @@ export async function contarPosts(usuarioId) {
 }
 
 // -------------------------------------------------------------
-// Ejercicio 5 · Todos a la vez
+// Ejercicio 4 · Esperar (extra)
+// Devuelve una PROMESA que se resuelva pasados `ms` milisegundos.
+//   await esperar(1000);  // espera un segundo
+// Pista: new Promise((resolve) => setTimeout(…))
+// -------------------------------------------------------------
+export function esperar(ms) {
+  // Escribe tu código aquí
+}
+
+// -------------------------------------------------------------
+// Ejercicio 5 · Todos a la vez (extra)
 // Recibes un array de ids. Devuelve un array con sus nombres.
 // Tiene que hacer las peticiones EN PARALELO (el test mide cuánto tarda).
 //   await nombresEnParalelo([1, 3]) → ['Ada Lovelace', 'Grace Hopper']
@@ -60,7 +60,7 @@ export async function nombresEnParalelo(ids) {
 }
 
 // -------------------------------------------------------------
-// Ejercicio 6 · Ficha de usuario
+// Ejercicio 6 · Ficha de usuario (extra)
 // Devuelve un objeto con el nombre del usuario y su número de posts.
 //   await resumenUsuario(1) → { nombre: 'Ada Lovelace', totalPosts: 2 }
 // Reto: lanza las dos peticiones en paralelo.

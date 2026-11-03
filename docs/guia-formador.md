@@ -7,7 +7,7 @@ Notas para preparar y dirigir el taller. El alumnado no necesita leer esto (aunq
 - **Público:** alumnado en prácticas, sin experiencia previa en JavaScript (o muy poca).
 - **Formato por módulo:** una explicación breve en directo y después ejercicios que se corrigen solos.
 - **Resultado:** cada persona termina con su portfolio funcionando y, quien quiera, publicado en GitHub Pages.
-- **Ritmo:** cada módulo tiene ejercicios obligatorios y extra. Los extra absorben la diferencia de nivel: quien va rápido no se aburre y quien va lento no se queda atrás en lo esencial.
+- **Ritmo:** cada módulo tiene ejercicios obligatorios y extra. Los obligatorios son solo lo que hace falta para llegar al portfolio, pensados para gente que empieza. Los extra absorben la diferencia de nivel: quien va rápido no se aburre y quien va lento no se queda atrás en lo esencial.
 
 ## Antes del taller
 
@@ -39,6 +39,7 @@ git switch main            # volver
 2. Fork + clonar + `npm run test:01`. Que todo el mundo vea la pantalla en rojo.
 3. Resuelve tú en directo el **ejercicio 2 del módulo 01** (`tipoDe`) para enseñar el ciclo: leer el mensaje → escribir código → volver a comprobar → verde.
 4. Enseña `npm run progreso` y `npm run vigilar 01`.
+5. Si el grupo empieza de cero, haced juntos el [módulo 00](../modulos/00-primeros-pasos/): la terminal, el primer programa y cómo leer los errores y el corrector.
 
 ### 01 · Variables, tipos y operadores
 
@@ -62,19 +63,20 @@ git switch main            # volver
 - **Errores típicos:**
   - `console.log` en lugar de `return`.
   - Flecha con llaves y sin `return`: `(x) => { x * 2 }` devuelve `undefined`. **Es el error más común del taller**, aparecerá también en `map` y `filter`.
-- Los closures (ejercicio 6) cuestan: si alguien no lo pilla del todo, que siga. Lo importante para la web son los callbacks.
+- Las funciones que devuelven funciones y los closures (ejercicios 5 y 6) son extra: explícalos por encima y que los haga quien vaya rápido. Lo importante para la web son los callbacks.
 
 ### 05 · Arrays (el módulo clave)
 
 - **En directo:** con un array de precios: `map`, `filter`, `reduce` y encadenarlos. Después, la trampa de `sort` (`[10, 1, 5, 100].sort()`).
 - **Errores típicos:** callback con llaves sin `return`; `reduce` sin valor inicial (falla con arrays vacíos); `sort` modificando el original.
+- `reduce` y la trampa de `sort` están en los ejercicios extra: si el grupo empieza de cero, enséñalos solo de pasada.
 - Si vais con retraso, que no se salten este: es lo que más van a usar en el proyecto.
 
 ### 06 · Objetos y JSON
 
 - **En directo:** objeto `persona`, punto vs corchetes, desestructuración, spread. Después un **array de proyectos** (puente directo al portfolio) y `JSON.stringify` / `JSON.parse`.
 - **Errores típicos:** modificar el objeto en vez de copiarlo; `find` devuelve `undefined` y el ejercicio pide `null` (`?? null`).
-- Los ejercicios 6 y 8 se reutilizan tal cual en el proyecto final.
+- Los ejercicios 5 y 7 se reutilizan tal cual en el proyecto final.
 
 ### 07 · DOM y eventos
 
@@ -90,8 +92,9 @@ git switch main            # volver
 ### 08 · Asincronía
 
 - **En directo:** el orden `1, 3, 2` con `setTimeout`; `obtenerUsuario` con `.then` y luego con `async/await`; `try/catch`; `Promise.all`. Para terminar, haz un `fetch('/proyecto-final/data/proyectos.json')` en la consola del navegador: es justo lo que harán en el proyecto.
-- **Errores típicos:** olvidar el `await` (`Promise { <pending> }`); hacer los `await` uno detrás de otro cuando podían ir en paralelo (el test del ejercicio 5 lo comprueba).
-- **Si vais con retraso, este es el módulo que hay que recortar:** ejercicios 1 a 4 y al proyecto. Del proyecto solo necesitan `fetch` (paso 1.6), que viene explicado en el README.
+- **Errores típicos:** olvidar el `await` (`Promise { <pending> }`); hacer los `await` uno detrás de otro cuando podían ir en paralelo (lo comprueba el ejercicio extra 5).
+- Los obligatorios (1 a 3) son justo lo que usa el proyecto: `async` / `await` y `try` / `catch`. Crear promesas, `Promise.all` y `.then()` son extra.
+- **Si vais con retraso, este es el módulo que hay que recortar:** enseña `fetch` en directo, que hagan el ejercicio 1 y pasad al proyecto. Del proyecto solo necesitan `fetch` (paso 1.6), que viene explicado en el README.
 
 ### Proyecto final
 
@@ -109,17 +112,28 @@ git switch main            # volver
 - Una demo breve por persona: qué ha hecho, algo de lo que esté orgulloso/a, algo que le haya costado.
 - Cierre: recursos para seguir (al final del README principal) y qué viene después en las prácticas.
 
+## Si el grupo empieza de cero
+
+Los obligatorios ya están pensados para este perfil. Además:
+
+- Haz la **preparación todos a la vez**, paso a paso y proyectando tu pantalla, o deja los equipos con el repo ya clonado. A quien se le atasque Git, que descargue el ZIP (lo explica el README) y siga.
+- Haced juntos el **módulo 00**: la terminal, el primer programa y cómo leer los errores y el corrector.
+- En las explicaciones en directo, ve más despacio y con más ejemplos, y escribe el código delante de ellos.
+- Insiste en que **los extra son opcionales**: nadie tiene que hacerlos para seguir.
+- Antes del módulo 07, repasa el HTML: hay un repaso al principio de su README.
+- En el proyecto, la meta es el **Nivel 1**. Los niveles 2 y 3, solo quien llegue.
+- Trabajo en parejas desde el principio: es lo que más ayuda a quien empieza.
+
 ## Si vais con retraso
 
 Reglas generales: **ningún ejercicio extra**, y pasa de módulo cuando la mayoría del grupo tenga los obligatorios. El resto puede terminarlos mientras explicas el siguiente.
 
 | Bloque | Qué recortar |
 |---|---|
-| 02 y 03 | Juntarlos en una sola explicación; del 03 basta con los ejercicios 1–4 |
-| 04 | El 6 (closure) se explica pero es opcional |
+| 02 y 03 | Juntarlos en una sola explicación |
 | 05 | Nada: es el módulo clave |
-| 06 | Quedarse con los ejercicios 1, 3, 5, 6 y 8 |
-| 08 | Solo los ejercicios 1–4 |
+| 06 | Quedarse con los ejercicios 1, 4, 5 y 7 (los que usa el portfolio) |
+| 08 | Enseñar `fetch` en directo y hacer solo el ejercicio 1 |
 | Proyecto | Nivel 1 + filtros y buscador (pasos 2.1–2.4) |
 
 ## Cómo seguir el ritmo del grupo

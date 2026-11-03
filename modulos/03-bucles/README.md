@@ -89,4 +89,4 @@ Y dentro de una función, `return` también sale del bucle (y de la función).
 
 ## Ejercicios
 
-Abre [`ejercicios.js`](ejercicios.js). Hay 6 obligatorios y 2 extra.
+Abre [`ejercicios.js`](ejercicios.js). Hay 4 obligatorios y 4 extra.

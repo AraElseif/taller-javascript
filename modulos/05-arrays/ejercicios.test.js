@@ -28,15 +28,7 @@ describe('Ejercicio 3 · Solo los pares (filter)', () => {
   ]);
 });
 
-describe('Ejercicio 4 · Sumar todos (reduce)', () => {
-  casos(ej, 'sumarTodos', [
-    [[[1, 2, 3, 4]], 10],
-    [[[5]], 5],
-    [[[]], 0],
-  ]);
-});
-
-describe('Ejercicio 5 · Gritar nombres', () => {
+describe('Ejercicio 4 · Gritar nombres', () => {
   casos(ej, 'nombresEnMayusculas', [
     [[['ada', 'linus']], ['ADA', 'LINUS']],
     [[['Grace']], ['GRACE']],
@@ -44,7 +36,7 @@ describe('Ejercicio 5 · Gritar nombres', () => {
   ]);
 });
 
-describe('Ejercicio 6 · El primero que supera el límite (find)', () => {
+describe('Ejercicio 5 · El primero que supera el límite (find)', () => {
   casos(ej, 'primeroMayorQue', [
     [[[3, 8, 12, 20], 10], 12],
     [[[50, 1], 10], 50],
@@ -56,7 +48,7 @@ describe('Ejercicio 6 · El primero que supera el límite (find)', () => {
   });
 });
 
-describe('Ejercicio 7 · ¿Hay algún negativo? (some)', () => {
+describe('Ejercicio 6 · ¿Hay algún negativo? (some)', () => {
   casos(ej, 'hayNegativos', [
     [[[3, -1, 5]], true],
     [[[3, 1, 5]], false],
@@ -64,7 +56,15 @@ describe('Ejercicio 7 · ¿Hay algún negativo? (some)', () => {
   ]);
 });
 
-describe('Ejercicio 8 · Ordenar sin estropear', () => {
+describe('Ejercicio 7 · Sumar todos (reduce) (extra)', () => {
+  casos(ej, 'sumarTodos', [
+    [[[1, 2, 3, 4]], 10],
+    [[[5]], 5],
+    [[[]], 0],
+  ]);
+});
+
+describe('Ejercicio 8 · Ordenar sin estropear (extra)', () => {
   casos(ej, 'ordenarSinTocar', [
     [[[3, 1, 2]], [1, 2, 3]],
     [[[10, 1, 5, 100]], [1, 5, 10, 100]],

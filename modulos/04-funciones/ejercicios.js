@@ -45,7 +45,7 @@ export function aplicarNVeces(fn, n, valor) {
 }
 
 // -------------------------------------------------------------
-// Ejercicio 5 · Fábrica de multiplicadores
+// Ejercicio 5 · Fábrica de multiplicadores (extra)
 // Devuelve una FUNCIÓN que multiplique por el factor recibido.
 //   const doble = crearMultiplicador(2);
 //   doble(5) → 10
@@ -57,7 +57,7 @@ export function crearMultiplicador(factor) {
 }
 
 // -------------------------------------------------------------
-// Ejercicio 6 · Contador con memoria (closure)
+// Ejercicio 6 · Contador con memoria (closure) (extra)
 // Devuelve una función que, cada vez que se llama, devuelve
 // el siguiente número: 1, 2, 3…
 // Cada contador nuevo empieza otra vez desde 1.

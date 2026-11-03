@@ -110,5 +110,5 @@ Diferencias con un objeto JS: las claves van **siempre entre comillas dobles**, 
 
 ## Ejercicios
 
-Abre [`ejercicios.js`](ejercicios.js). Hay 8 obligatorios y 2 extra.
-Los ejercicios 5 a 8 usan una lista de proyectos: **los volverás a usar en el proyecto final**.
+Abre [`ejercicios.js`](ejercicios.js). Hay 7 obligatorios y 3 extra.
+Los ejercicios 4 a 7 usan una lista de proyectos: **los volverás a usar en el proyecto final**.

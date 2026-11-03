@@ -77,7 +77,7 @@ hacerDosVeces(() => console.log('¡Hola!'));   // ¡Hola! ¡Hola!
 
 Lo usarás constantemente: `array.map(callback)`, `boton.addEventListener('click', callback)`, `setTimeout(callback, 1000)`…
 
-### Funciones que fabrican funciones
+### Funciones que fabrican funciones (extra)
 
 ```js
 function crearSaludo(saludo) {
@@ -91,7 +91,7 @@ saludoFormal('Ada');    // 'Buenos días, Ada'
 saludoColega('Linus');  // '¿Qué pasa, Linus'
 ```
 
-### Closures: funciones con memoria
+### Closures: funciones con memoria (extra)
 
 Una función "recuerda" las variables del sitio donde se creó, aunque esa función ya haya terminado:
 
@@ -113,4 +113,4 @@ hucha(10);   // 15
 
 ## Ejercicios
 
-Abre [`ejercicios.js`](ejercicios.js). Hay 6 obligatorios y 2 extra.
+Abre [`ejercicios.js`](ejercicios.js). Hay 4 obligatorios y 4 extra. Los extra son los de funciones que devuelven funciones.

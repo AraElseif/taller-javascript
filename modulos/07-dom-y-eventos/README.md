@@ -14,6 +14,30 @@ Abre <http://localhost:3000/modulos/07-dom-y-eventos/>, abre las herramientas de
 
 ---
 
+## Repaso rápido de HTML
+
+Una página web está hecha de **etiquetas** que se abren y se cierran. Dentro de la etiqueta de apertura puede haber **atributos**:
+
+```html
+<section class="caja">                  <!-- etiqueta section con el atributo class -->
+  <h2 id="titulo">Hola</h2>             <!-- id: nombre ÚNICO en toda la página -->
+  <p class="texto destacado">…</p>      <!-- class: se puede repetir y tener varias -->
+  <input id="nombre" type="text" />     <!-- algunas etiquetas no tienen cierre -->
+  <button type="button">Pulsa</button>
+</section>                              <!-- cierre de la etiqueta section -->
+```
+
+Para encontrar elementos desde JavaScript usarás **selectores CSS**, los mismos que en las hojas de estilo:
+
+| Selector | Encuentra |
+|---|---|
+| `#titulo` | El elemento con `id="titulo"` (con almohadilla) |
+| `.caja` | Los elementos con `class="caja"` (con punto) |
+| `p` | Todas las etiquetas `<p>` |
+| `.caja p` | Los `<p>` que están dentro de algo con clase `caja` |
+
+> **Consejo:** abre [`index.html`](index.html) de este módulo y busca los `id` de cada ejercicio. Los vas a necesitar.
+
 ## ¿Qué es el DOM?
 
 Cuando el navegador lee tu HTML, construye un **árbol de objetos** (el DOM: *Document Object Model*). JavaScript puede leer y modificar ese árbol, y la página cambia al instante.

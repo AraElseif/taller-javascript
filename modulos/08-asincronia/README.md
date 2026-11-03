@@ -2,6 +2,8 @@
 
 **Objetivo:** trabajar con cosas que tardan: pedir datos a un servidor, esperar a un temporizador…
 
+> **Si es tu primera vez:** céntrate en `async` / `await`, `try` / `catch` y `fetch`. Es lo que vas a usar en el proyecto. Lo marcado como *(extra)* es para los ejercicios extra.
+
 ```bash
 npm run test:08
 ```
@@ -29,7 +31,7 @@ const promesa = new Promise((resolve, reject) => {
 });
 ```
 
-### Consumirlas con `.then()` / `.catch()`
+### Consumirlas con `.then()` / `.catch()` (extra)
 
 ```js
 obtenerUsuario(1)
@@ -68,7 +70,7 @@ async function mostrarUsuario(id) {
 }
 ```
 
-## Varias a la vez: `Promise.all`
+## Varias a la vez: `Promise.all` (extra)
 
 Si las peticiones no dependen unas de otras, lánzalas **en paralelo**:
 
@@ -106,5 +108,5 @@ Fíjate: **dos** `await`. Uno para la respuesta y otro para leer su contenido.
 
 ## Ejercicios
 
-Abre [`ejercicios.js`](ejercicios.js). Hay 6 obligatorios y 2 extra.
+Abre [`ejercicios.js`](ejercicios.js). Hay 3 obligatorios y 5 extra.
 Usan las funciones de [`api-falsa.js`](api-falsa.js): `obtenerUsuario(id)` y `obtenerPosts(usuarioId)`. Las dos tardan 100 ms en responder.

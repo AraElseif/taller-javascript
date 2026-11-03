@@ -25,21 +25,7 @@ describe('Ejercicio 2 · Presentarse', () => {
   ]);
 });
 
-describe('Ejercicio 3 · Cumplir años', () => {
-  casos(ej, 'cumplirAnios', [
-    [[{ nombre: 'Ada', edad: 36 }], { nombre: 'Ada', edad: 37 }],
-    [[{ nombre: 'Linus', edad: 21, pais: 'Finlandia' }], { nombre: 'Linus', edad: 22, pais: 'Finlandia' }],
-  ]);
-  it('no modifica el objeto original', () => {
-    const original = { nombre: 'Ada', edad: 36 };
-    const nuevo = funcion(ej, 'cumplirAnios')(original);
-    igual(nuevo, { nombre: 'Ada', edad: 37 }, "cumplirAnios({ nombre: 'Ada', edad: 36 })");
-    assert.equal(original.edad, 36, 'Has modificado el objeto original. Crea uno nuevo con { ...persona }');
-    assert.notEqual(nuevo, original, 'Has devuelto el mismo objeto que recibiste: tiene que ser uno nuevo');
-  });
-});
-
-describe('Ejercicio 4 · Contar propiedades', () => {
+describe('Ejercicio 3 · Contar propiedades', () => {
   casos(ej, 'contarPropiedades', [
     [[{ a: 1, b: 2, c: 3 }], 3],
     [[{ nombre: 'Ada' }], 1],
@@ -47,7 +33,7 @@ describe('Ejercicio 4 · Contar propiedades', () => {
   ]);
 });
 
-describe('Ejercicio 5 · Solo los títulos', () => {
+describe('Ejercicio 4 · Solo los títulos', () => {
   it('devuelve los títulos en orden', () => {
     igual(
       funcion(ej, 'titulos')(crearProyectos()),
@@ -58,7 +44,7 @@ describe('Ejercicio 5 · Solo los títulos', () => {
   casos(ej, 'titulos', [[[[]], []]]);
 });
 
-describe('Ejercicio 6 · Filtrar por tecnología', () => {
+describe('Ejercicio 5 · Filtrar por tecnología', () => {
   it("filtrarPorTecnologia(proyectos, 'HTML') → Tienda online y Landing page", () => {
     const resultado = funcion(ej, 'filtrarPorTecnologia')(crearProyectos(), 'HTML');
     igual(resultado?.map?.((p) => p.id), [1, 4], "filtrarPorTecnologia(proyectos, 'HTML') (mostrando solo los id)");
@@ -72,7 +58,7 @@ describe('Ejercicio 6 · Filtrar por tecnología', () => {
   });
 });
 
-describe('Ejercicio 7 · Buscar por id', () => {
+describe('Ejercicio 6 · Buscar por id', () => {
   it('buscarPorId(proyectos, 2) → Juego de memoria', () => {
     igual(funcion(ej, 'buscarPorId')(crearProyectos(), 2), crearProyectos()[1], 'buscarPorId(proyectos, 2)');
   });
@@ -81,11 +67,25 @@ describe('Ejercicio 7 · Buscar por id', () => {
   });
 });
 
-describe('Ejercicio 8 · Todas las tecnologías', () => {
+describe('Ejercicio 7 · Todas las tecnologías', () => {
   it('sin repetir y en orden alfabético', () => {
     igual(funcion(ej, 'tecnologiasUnicas')(crearProyectos()), ['CSS', 'HTML', 'JavaScript', 'Node'], 'tecnologiasUnicas(proyectos)');
   });
   casos(ej, 'tecnologiasUnicas', [[[[]], []]]);
+});
+
+describe('Ejercicio 8 · Cumplir años (extra)', () => {
+  casos(ej, 'cumplirAnios', [
+    [[{ nombre: 'Ada', edad: 36 }], { nombre: 'Ada', edad: 37 }],
+    [[{ nombre: 'Linus', edad: 21, pais: 'Finlandia' }], { nombre: 'Linus', edad: 22, pais: 'Finlandia' }],
+  ]);
+  it('no modifica el objeto original', () => {
+    const original = { nombre: 'Ada', edad: 36 };
+    const nuevo = funcion(ej, 'cumplirAnios')(original);
+    igual(nuevo, { nombre: 'Ada', edad: 37 }, "cumplirAnios({ nombre: 'Ada', edad: 36 })");
+    assert.equal(original.edad, 36, 'Has modificado el objeto original. Crea uno nuevo con { ...persona }');
+    assert.notEqual(nuevo, original, 'Has devuelto el mismo objeto que recibiste: tiene que ser uno nuevo');
+  });
 });
 
 describe('Ejercicio 9 · ¿Cuántas veces se usa cada tecnología? (extra)', () => {

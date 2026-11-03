@@ -48,7 +48,7 @@ describe('Ejercicio 4 · Aplicar n veces', () => {
   });
 });
 
-describe('Ejercicio 5 · Fábrica de multiplicadores', () => {
+describe('Ejercicio 5 · Fábrica de multiplicadores (extra)', () => {
   it('crearMultiplicador(2) devuelve una función que dobla', () => {
     const doble = funcion(ej, 'crearMultiplicador')(2);
     esFuncion(doble, 'crearMultiplicador(2)');
@@ -61,7 +61,7 @@ describe('Ejercicio 5 · Fábrica de multiplicadores', () => {
   });
 });
 
-describe('Ejercicio 6 · Contador con memoria (closure)', () => {
+describe('Ejercicio 6 · Contador con memoria (closure) (extra)', () => {
   it('cuenta 1, 2, 3', () => {
     const contador = funcion(ej, 'crearContador')();
     esFuncion(contador, 'crearContador()');

@@ -32,16 +32,7 @@ export function soloPares(numeros) {
 }
 
 // -------------------------------------------------------------
-// Ejercicio 4 · Sumar todos (reduce)
-//   sumarTodos([1, 2, 3, 4]) → 10
-//   sumarTodos([])           → 0
-// -------------------------------------------------------------
-export function sumarTodos(numeros) {
-  // Escribe tu código aquí
-}
-
-// -------------------------------------------------------------
-// Ejercicio 5 · Gritar nombres
+// Ejercicio 4 · Gritar nombres
 // Devuelve los nombres en mayúsculas.
 //   nombresEnMayusculas(['ada', 'linus']) → ['ADA', 'LINUS']
 // -------------------------------------------------------------
@@ -50,7 +41,7 @@ export function nombresEnMayusculas(nombres) {
 }
 
 // -------------------------------------------------------------
-// Ejercicio 6 · El primero que supera el límite (find)
+// Ejercicio 5 · El primero que supera el límite (find)
 // Devuelve el primer número mayor que el límite, o undefined si no hay ninguno.
 //   primeroMayorQue([3, 8, 12, 20], 10) → 12
 //   primeroMayorQue([1, 2], 10)         → undefined
@@ -60,7 +51,7 @@ export function primeroMayorQue(numeros, limite) {
 }
 
 // -------------------------------------------------------------
-// Ejercicio 7 · ¿Hay algún negativo? (some)
+// Ejercicio 6 · ¿Hay algún negativo? (some)
 //   hayNegativos([3, -1, 5]) → true
 //   hayNegativos([3, 1, 5])  → false
 // -------------------------------------------------------------
@@ -69,7 +60,16 @@ export function hayNegativos(numeros) {
 }
 
 // -------------------------------------------------------------
-// Ejercicio 8 · Ordenar sin estropear
+// Ejercicio 7 · Sumar todos (reduce) (extra)
+//   sumarTodos([1, 2, 3, 4]) → 10
+//   sumarTodos([])           → 0
+// -------------------------------------------------------------
+export function sumarTodos(numeros) {
+  // Escribe tu código aquí
+}
+
+// -------------------------------------------------------------
+// Ejercicio 8 · Ordenar sin estropear (extra)
 // Devuelve los números ordenados de menor a mayor
 // SIN modificar el array original.
 //   ordenarSinTocar([10, 1, 5, 100]) → [1, 5, 10, 100]

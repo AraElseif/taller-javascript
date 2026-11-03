@@ -39,7 +39,7 @@ describe('Ejercicio 4 · Darle la vuelta a un texto', () => {
   ]);
 });
 
-describe('Ejercicio 5 · ¿Es primo?', () => {
+describe('Ejercicio 5 · ¿Es primo? (extra)', () => {
   casos(ej, 'esPrimo', [
     [[2], true],
     [[3], true],
@@ -52,7 +52,7 @@ describe('Ejercicio 5 · ¿Es primo?', () => {
   ]);
 });
 
-describe('Ejercicio 6 · Contar dígitos', () => {
+describe('Ejercicio 6 · Contar dígitos (extra)', () => {
   casos(ej, 'contarDigitos', [
     [[7], 1],
     [[42], 2],

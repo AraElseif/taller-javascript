@@ -77,7 +77,7 @@ edades.some((edad) => edad < 18);   // true  → hay al menos un menor
 edades.every((edad) => edad < 18);  // false → no todos son menores
 ```
 
-### `reduce` → reducir el array a un único valor
+### `reduce` → reducir el array a un único valor (extra)
 
 ```js
 const numeros = [1, 2, 3, 4];
@@ -97,7 +97,7 @@ const total = [5, 12, 8, 20]
   .reduce((a, n) => a + n, 0); // 80
 ```
 
-## Ordenar
+## Ordenar (extra)
 
 ```js
 const numeros = [10, 1, 5, 100];
@@ -125,5 +125,5 @@ const copia = [...a];                 // una copia independiente
 
 ## Ejercicios
 
-Abre [`ejercicios.js`](ejercicios.js). Hay 8 obligatorios y 2 extra.
+Abre [`ejercicios.js`](ejercicios.js). Hay 6 obligatorios y 4 extra.
 **Reto:** intenta resolverlos sin `for`, solo con los métodos de arrays.

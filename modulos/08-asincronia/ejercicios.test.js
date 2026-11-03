@@ -18,7 +18,30 @@ async function cronometrar(fn) {
   return { resultado, ms: performance.now() - inicio };
 }
 
-describe('Ejercicio 1 · Esperar', () => {
+describe('Ejercicio 1 · Nombre de usuario', () => {
+  casos(ej, 'nombreDeUsuario', [
+    [[1], 'Ada Lovelace'],
+    [[3], 'Grace Hopper'],
+  ]);
+});
+
+describe('Ejercicio 2 · Si falla, \'Anónimo\'', () => {
+  casos(ej, 'nombreOAnonimo', [
+    [[2], 'Alan Turing'],
+    [[99], 'Anónimo'],
+  ]);
+});
+
+describe('Ejercicio 3 · Contar posts', () => {
+  casos(ej, 'contarPosts', [
+    [[1], 2],
+    [[2], 1],
+    [[3], 3],
+    [[99], 0],
+  ]);
+});
+
+describe('Ejercicio 4 · Esperar (extra)', () => {
   it('devuelve una promesa', () => {
     const promesa = funcion(ej, 'esperar')(10);
     esPromesa(promesa, 'esperar(10)');
@@ -30,30 +53,7 @@ describe('Ejercicio 1 · Esperar', () => {
   });
 });
 
-describe('Ejercicio 2 · Nombre de usuario', () => {
-  casos(ej, 'nombreDeUsuario', [
-    [[1], 'Ada Lovelace'],
-    [[3], 'Grace Hopper'],
-  ]);
-});
-
-describe('Ejercicio 3 · Si falla, \'Anónimo\'', () => {
-  casos(ej, 'nombreOAnonimo', [
-    [[2], 'Alan Turing'],
-    [[99], 'Anónimo'],
-  ]);
-});
-
-describe('Ejercicio 4 · Contar posts', () => {
-  casos(ej, 'contarPosts', [
-    [[1], 2],
-    [[2], 1],
-    [[3], 3],
-    [[99], 0],
-  ]);
-});
-
-describe('Ejercicio 5 · Todos a la vez', () => {
+describe('Ejercicio 5 · Todos a la vez (extra)', () => {
   casos(ej, 'nombresEnParalelo', [
     [[[1, 3]], ['Ada Lovelace', 'Grace Hopper']],
     [[[3, 2, 1]], ['Grace Hopper', 'Alan Turing', 'Ada Lovelace']],
@@ -69,7 +69,7 @@ describe('Ejercicio 5 · Todos a la vez', () => {
   });
 });
 
-describe('Ejercicio 6 · Ficha de usuario', () => {
+describe('Ejercicio 6 · Ficha de usuario (extra)', () => {
   casos(ej, 'resumenUsuario', [
     [[1], { nombre: 'Ada Lovelace', totalPosts: 2 }],
     [[3], { nombre: 'Grace Hopper', totalPosts: 3 }],
