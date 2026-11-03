@@ -19,7 +19,6 @@ Cada módulo tiene una teoría exprés con ejemplos y unos ejercicios que se **c
 | [07 · DOM y eventos](modulos/07-dom-y-eventos/) | Cambiar la página, clics, formularios |
 | [08 · Asincronía](modulos/08-asincronia/) | Promesas, `async`/`await`, `fetch` |
 | [Proyecto final](proyecto-final/) | Tu portfolio (o lo que tú quieras) |
-| Demos | Enseña lo que has hecho |
 
 > Cada módulo tiene ejercicios **obligatorios** y ejercicios **extra** para quien vaya rápido. Si te atascas, pide ayuda o pasa al siguiente y vuelve después.
 

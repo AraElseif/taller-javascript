@@ -79,13 +79,3 @@ El HTML y el CSS ya están hechos para que te centres en JavaScript. Pero es **t
 - [ ] Algo que se **guarde en `localStorage`**.
 
 Coméntalo antes con quien imparte el taller para que el alcance sea realista. Puedes crear tu carpeta junto a `proyecto-final/` y reutilizar su estructura.
-
----
-
-## Demo final
-
-Al acabar, cada persona enseña su web brevemente:
-
-1. Qué has hecho (enséñalo funcionando).
-2. Una cosa de la que estés orgulloso/a.
-3. Una cosa que te haya costado y cómo la has resuelto.

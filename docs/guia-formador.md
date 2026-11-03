@@ -107,10 +107,9 @@ git switch main            # volver
   - Rutas: `fetch('data/proyectos.json')` es relativo a la **página HTML**, no al archivo `.js`.
 - Antes de terminar, que todo el mundo haga commit y push, aunque no haya acabado. Quien pueda, que publique en GitHub Pages (instrucciones en el README del proyecto; el repo incluye `.nojekyll` para que Pages sirva los archivos tal cual).
 
-### Demos y cierre
+### Cierre
 
-- Una demo breve por persona: qué ha hecho, algo de lo que esté orgulloso/a, algo que le haya costado.
-- Cierre: recursos para seguir (al final del README principal) y qué viene después en las prácticas.
+- Recursos para seguir aprendiendo (al final del README principal) y qué viene después en las prácticas.
 
 ## Si el grupo empieza de cero
 
@@ -150,7 +149,6 @@ Reglas generales: **ningún ejercicio extra**, y pasa de módulo cuando la mayor
 | Nivel 2 | Nada | 1–3 pasos | 4 o más pasos |
 | Código | Difícil de leer | Se entiende | Nombres claros, funciones pequeñas |
 | Personalización | Datos de ejemplo | Sus datos | Sus datos y su estilo |
-| Demo | No explica | Enseña lo que ha hecho | Explica cómo ha resuelto un problema |
 
 ## Problemas típicos
 
