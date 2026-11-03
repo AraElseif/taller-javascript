@@ -1,0 +1,144 @@
+:root {
+  --fondo: #f5f5fa;
+  --superficie: #ffffff;
+  --texto: #1d1d2b;
+  --texto-suave: #5b5b70;
+  --primario: #5b5bd6;
+  --borde: #e3e3ee;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: light;
+}
+
+body.oscuro {
+  --fondo: #13131c;
+  --superficie: #1e1e2b;
+  --texto: #ececf4;
+  --texto-suave: #a3a3b8;
+  --primario: #8b8bf0;
+  --borde: #33334a;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.5;
+  transition: background 0.3s, color 0.3s;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1rem 6rem;
+}
+
+.etiqueta {
+  margin: 0;
+  color: var(--primario);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h1 {
+  margin: 0.25rem 0;
+}
+
+#intro.destacado {
+  background: linear-gradient(120deg, #ffe58a 0%, #ffd1e8 100%);
+  color: #1d1d2b;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.caja {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.caja h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+}
+
+button {
+  font: inherit;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  background: var(--primario);
+  color: white;
+  cursor: pointer;
+}
+
+button.secundario {
+  background: transparent;
+  color: var(--texto);
+  border: 1px solid var(--borde);
+}
+
+input {
+  font: inherit;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  margin-bottom: 0.25rem;
+}
+
+.botones,
+.formulario {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.contador {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.saludo {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+.lista {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.tareas li {
+  cursor: pointer;
+  padding: 0.25rem 0;
+}
+
+.tareas li.completada {
+  text-decoration: line-through;
+  color: var(--texto-suave);
+}
+
+.pista {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  margin-bottom: 0;
+}

@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "titulo": "Lista de tareas",
+    "descripcion": "Añade, tacha y gestiona tareas desde el navegador.",
+    "detalle": "Mi primera aplicación con JavaScript: formulario, eventos y manipulación del DOM. La hice en el módulo 07 del taller.",
+    "tecnologias": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "destacado": true,
+    "demo": "",
+    "codigo": ""
+  },
+  {
+    "id": 2,
+    "titulo": "Este portfolio",
+    "descripcion": "Web personal que carga los proyectos desde un JSON y permite filtrarlos.",
+    "detalle": "Construida desde una plantilla durante el taller de JavaScript: fetch, filtros, buscador, validación de formularios y modo oscuro.",
+    "tecnologias": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JSON"
+    ],
+    "destacado": true,
+    "demo": "",
+    "codigo": ""
+  },
+  {
+    "id": 3,
+    "titulo": "Calculadora de propinas",
+    "descripcion": "Calcula cuánto paga cada persona al dividir la cuenta.",
+    "detalle": "Práctica de operadores, conversión de tipos y eventos input para recalcular en directo.",
+    "tecnologias": [
+      "HTML",
+      "JavaScript"
+    ],
+    "destacado": false,
+    "demo": "",
+    "codigo": ""
+  },
+  {
+    "id": 4,
+    "titulo": "Landing page de una cafetería",
+    "descripcion": "Página de presentación responsive con carta y mapa.",
+    "detalle": "Maquetación con Flexbox y Grid, adaptada a móvil.",
+    "tecnologias": [
+      "HTML",
+      "CSS"
+    ],
+    "destacado": false,
+    "demo": "",
+    "codigo": ""
+  },
+  {
+    "id": 5,
+    "titulo": "API de chistes",
+    "descripcion": "Pequeño servidor que devuelve un chiste aleatorio en JSON.",
+    "detalle": "Primer contacto con Node.js y con cómo funciona una API por dentro.",
+    "tecnologias": [
+      "Node",
+      "JavaScript",
+      "JSON"
+    ],
+    "destacado": false,
+    "demo": "",
+    "codigo": ""
+  }
+]

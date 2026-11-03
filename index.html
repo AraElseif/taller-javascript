@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Taller de JavaScript</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23f7df1e'/></svg>" />
+    <style>
+      :root {
+        --fondo: #f7f7fb;
+        --superficie: #fff;
+        --texto: #1d1d2b;
+        --suave: #5b5b70;
+        --primario: #5b5bd6;
+        --borde: #e3e3ee;
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        color-scheme: light dark;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --fondo: #11111a;
+          --superficie: #1b1b28;
+          --texto: #ececf4;
+          --suave: #a3a3b8;
+          --primario: #8b8bf0;
+          --borde: #2e2e44;
+        }
+      }
+      body {
+        margin: 0;
+        background: var(--fondo);
+        color: var(--texto);
+        line-height: 1.5;
+      }
+      main {
+        width: min(760px, 100% - 2rem);
+        margin: 0 auto;
+        padding: 3rem 0;
+      }
+      h1 {
+        margin: 0 0 0.25rem;
+        font-size: clamp(2rem, 6vw, 3rem);
+      }
+      .sub {
+        margin: 0 0 2rem;
+        color: var(--suave);
+      }
+      .tarjetas {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+      a.tarjeta {
+        display: block;
+        padding: 1.25rem;
+        border: 1px solid var(--borde);
+        border-radius: 14px;
+        background: var(--superficie);
+        color: inherit;
+        text-decoration: none;
+        transition: border-color 0.2s, transform 0.2s;
+      }
+      a.tarjeta:hover {
+        border-color: var(--primario);
+        transform: translateY(-2px);
+      }
+      .tarjeta strong {
+        display: block;
+        font-size: 1.1rem;
+        margin: 0 0 0.2rem;
+      }
+      .tarjeta span {
+        color: var(--suave);
+        font-size: 0.95rem;
+      }
+      .nota {
+        margin-top: 2rem;
+        padding: 1rem 1.25rem;
+        border-radius: 12px;
+        background: var(--superficie);
+        border: 1px dashed var(--borde);
+        color: var(--suave);
+      }
+      code {
+        font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+        color: var(--primario);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Taller de JavaScript</h1>
+      <p class="sub">El servidor está funcionando. Estas son las páginas que se ven en el navegador:</p>
+
+      <div class="tarjetas">
+        <a class="tarjeta" href="modulos/07-dom-y-eventos/">
+          <strong>Módulo 07 · DOM y eventos</strong>
+          <span>Ejercicios con comprobador automático</span>
+        </a>
+        <a class="tarjeta" href="proyecto-final/">
+          <strong>Proyecto final</strong>
+          <span>Tu portfolio</span>
+        </a>
+      </div>
+
+      <p class="nota">
+        Los módulos 01–06 y 08 se hacen en la terminal: <code>npm run test:01</code>, <code>npm run test:02</code>…
+        Y para ver cómo vas en todo el taller: <code>npm run progreso</code>.
+      </p>
+    </main>
+  </body>
+</html>

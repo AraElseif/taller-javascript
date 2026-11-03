@@ -1,0 +1,624 @@
+/* =============================================================
+   Estilos del portfolio
+   El CSS ya está hecho para que te centres en JavaScript,
+   pero es TU portfolio: cambia colores, fuentes y lo que quieras.
+   Empieza por las variables de :root.
+   ============================================================= */
+
+:root {
+  --fondo: #f7f7fb;
+  --superficie: #ffffff;
+  --texto: #1d1d2b;
+  --texto-suave: #5b5b70;
+  --primario: #5b5bd6;
+  --primario-texto: #ffffff;
+  --primario-suave: #ececfb;
+  --acento: #d6338a;
+  --borde: #e3e3ee;
+  --error: #c92a2a;
+  --exito: #1f8a55;
+  --sombra: 0 8px 30px rgba(25, 25, 60, 0.08);
+  --radio: 16px;
+  --fuente: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  color-scheme: light;
+}
+
+/* Tema oscuro: se activa con <html data-tema="oscuro"> (Nivel 3) */
+:root[data-tema='oscuro'] {
+  --fondo: #11111a;
+  --superficie: #1b1b28;
+  --texto: #ececf4;
+  --texto-suave: #a3a3b8;
+  --primario: #8b8bf0;
+  --primario-texto: #11111a;
+  --primario-suave: #26263d;
+  --acento: #f06bb3;
+  --borde: #2e2e44;
+  --error: #ff8787;
+  --exito: #63d297;
+  --sombra: 0 8px 30px rgba(0, 0, 0, 0.35);
+  color-scheme: dark;
+}
+
+/* ---------- Base ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  background: var(--fondo);
+  color: var(--texto);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--primario);
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+.contenedor {
+  width: min(1100px, 100% - 2.5rem);
+  margin-inline: auto;
+}
+
+/* ---------- Cabecera ---------- */
+
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--fondo) 85%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--borde);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4rem;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primario), var(--acento));
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 3vw, 1.75rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu a {
+  color: var(--texto);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: var(--primario);
+}
+
+/* Icono de contraste dibujado con CSS: un círculo medio relleno */
+.btn-tema {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  background: var(--superficie);
+  color: var(--texto);
+  cursor: pointer;
+}
+
+.btn-tema::before {
+  content: '';
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  background: linear-gradient(90deg, currentColor 50%, transparent 50%);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding-block: clamp(4rem, 12vw, 8rem) clamp(3rem, 8vw, 5rem);
+}
+
+.hero-saludo {
+  margin: 0;
+  color: var(--primario);
+  font-weight: 600;
+}
+
+.hero h1 {
+  margin: 0.25rem 0;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--texto) 30%, var(--primario));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-rol {
+  margin: 0;
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  color: var(--texto-suave);
+  font-weight: 500;
+}
+
+.hero-intro {
+  max-width: 38rem;
+  font-size: 1.15rem;
+}
+
+.hero-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+/* ---------- Botones ---------- */
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 1.4rem;
+  border: 2px solid var(--primario);
+  border-radius: 999px;
+  background: var(--primario);
+  color: var(--primario-texto);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.boton:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sombra);
+}
+
+.boton-secundario {
+  background: transparent;
+  color: var(--primario);
+}
+
+/* ---------- Secciones ---------- */
+
+.seccion {
+  padding-block: clamp(3rem, 8vw, 5rem);
+}
+
+.seccion-titulo {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  margin: 0 0 2rem;
+}
+
+.seccion-titulo::after {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 4px;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--primario), var(--acento));
+}
+
+/* ---------- Sobre mí ---------- */
+
+.sobre-mi {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+.sobre-mi-texto p:first-child {
+  margin-top: 0;
+}
+
+.sobre-mi h3 {
+  margin-top: 0;
+}
+
+.habilidades {
+  display: grid;
+  gap: 0.9rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.habilidad {
+  display: grid;
+  gap: 0.3rem;
+  font-weight: 500;
+}
+
+/* La barra usa la variable --nivel (de 1 a 5) que pones desde JavaScript */
+.nivel {
+  position: relative;
+  height: 8px;
+  border-radius: 8px;
+  background: var(--primario-suave);
+  overflow: hidden;
+}
+
+.nivel::after {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: calc(var(--nivel, 0) * 20%);
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--primario), var(--acento));
+}
+
+/* ---------- Proyectos ---------- */
+
+.herramientas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filtro {
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  background: var(--superficie);
+  color: var(--texto);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.filtro:hover {
+  border-color: var(--primario);
+}
+
+.filtro.activo {
+  background: var(--primario);
+  border-color: var(--primario);
+  color: var(--primario-texto);
+}
+
+.buscador {
+  min-width: min(100%, 16rem);
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  background: var(--superficie);
+  color: var(--texto);
+  font: inherit;
+}
+
+.contador-proyectos {
+  min-height: 1.6em;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.aviso {
+  grid-column: 1 / -1;
+  padding: 2rem;
+  border: 2px dashed var(--borde);
+  border-radius: var(--radio);
+  text-align: center;
+  color: var(--texto-suave);
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--superficie);
+  box-shadow: var(--sombra);
+  animation: aparecer 0.4s ease both;
+  transition: transform 0.2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+}
+
+/* Franja de color en la parte de arriba de cada tarjeta */
+.tarjeta::before {
+  content: '';
+  height: 6px;
+  background: linear-gradient(90deg, var(--primario-suave), color-mix(in srgb, var(--acento) 30%, var(--superficie)));
+}
+
+.tarjeta.destacada {
+  border-color: var(--primario);
+}
+
+.tarjeta.destacada::before {
+  background: linear-gradient(90deg, var(--primario), var(--acento));
+}
+
+.tarjeta-cuerpo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.25rem;
+}
+
+.tarjeta h3 {
+  margin: 0 0 0.5rem;
+}
+
+.tarjeta p {
+  margin: 0 0 1rem;
+  color: var(--texto-suave);
+}
+
+.insignia {
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: var(--primario-suave);
+  color: var(--primario);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.etiquetas li {
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+}
+
+.tarjeta-enlaces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: auto;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.tarjeta-enlaces a {
+  text-decoration: none;
+}
+
+.enlace-boton {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--primario);
+  font: inherit;
+  cursor: pointer;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+/* ---------- Contacto ---------- */
+
+.contacto-intro {
+  max-width: 40rem;
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1.5rem;
+  max-width: 48rem;
+  margin-top: 2rem;
+}
+
+.campo-completo {
+  grid-column: 1 / -1;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  background: var(--superficie);
+  color: var(--texto);
+  font: inherit;
+  resize: vertical;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: 2px solid var(--primario);
+  outline-offset: 1px;
+  border-color: transparent;
+}
+
+.campo .invalido {
+  border-color: var(--error);
+}
+
+.error {
+  min-height: 1.4em;
+  margin: 0.3rem 0 0;
+  color: var(--error);
+  font-size: 0.85rem;
+}
+
+.exito {
+  margin: 1rem 0 0;
+  color: var(--exito);
+  font-weight: 600;
+}
+
+/* ---------- Pie ---------- */
+
+.pie {
+  margin-top: 3rem;
+  padding-block: 2rem;
+  border-top: 1px solid var(--borde);
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+.pie-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.pie p {
+  margin: 0;
+}
+
+.redes {
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ---------- Ventana de detalle (Nivel 3) ---------- */
+
+.modal {
+  width: min(32rem, 100% - 2rem);
+  padding: 2rem;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--superficie);
+  color: var(--texto);
+  box-shadow: var(--sombra);
+}
+
+.modal::backdrop {
+  background: rgba(10, 10, 20, 0.55);
+  backdrop-filter: blur(3px);
+}
+
+.modal h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+/* ---------- Animaciones al hacer scroll (Nivel 3) ----------
+   Solo se activan cuando JavaScript añade la clase "animaciones" al <html>.
+   Así, si no haces el Nivel 3, todo se ve igual de bien. */
+
+.animaciones .revelar {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.animaciones .revelar.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Móvil ---------- */
+
+@media (max-width: 720px) {
+  .sobre-mi,
+  .formulario {
+    grid-template-columns: 1fr;
+  }
+
+  .menu {
+    font-size: 0.95rem;
+  }
+
+  .buscador {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

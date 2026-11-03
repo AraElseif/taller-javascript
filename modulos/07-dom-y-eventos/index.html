@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Módulo 07 · DOM y eventos</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <script>
+      // Guarda los errores de tu código para que el comprobador pueda avisarte
+      window.__erroresDelTaller = [];
+      window.addEventListener('error', (e) => window.__erroresDelTaller.push(e.message));
+    </script>
+  </head>
+  <body>
+    <main>
+      <header class="cabecera">
+        <p class="etiqueta">Módulo 07 · DOM y eventos</p>
+        <h1 id="titulo">Título original</h1>
+        <p id="intro">Este párrafo debería acabar destacado.</p>
+      </header>
+
+      <section class="caja">
+        <h2>Ejercicio 3 · Lista de frutas</h2>
+        <ul id="lista-frutas" class="lista"></ul>
+      </section>
+
+      <section class="caja">
+        <h2>Ejercicio 4 · Contador</h2>
+        <p class="contador"><span id="contador">0</span></p>
+        <div class="botones">
+          <button id="btn-sumar" type="button">+1</button>
+          <button id="btn-reiniciar" type="button" class="secundario">Reiniciar</button>
+        </div>
+      </section>
+
+      <section class="caja">
+        <h2>Ejercicio 5 · Saludo en directo</h2>
+        <label for="input-nombre">Tu nombre</label>
+        <input id="input-nombre" type="text" placeholder="Escribe tu nombre…" autocomplete="off" />
+        <p id="saludo" class="saludo">Hola, desconocido</p>
+      </section>
+
+      <section class="caja">
+        <h2>Ejercicio 6 · Modo oscuro</h2>
+        <p>Este botón debería cambiar el tema de toda la página.</p>
+        <button id="btn-tema" type="button">Cambiar tema</button>
+      </section>
+
+      <section class="caja">
+        <h2>Ejercicio 7 · Lista de tareas</h2>
+        <form id="form-tarea" class="formulario">
+          <input id="input-tarea" name="tarea" type="text" placeholder="Nueva tarea…" autocomplete="off" />
+          <button type="submit">Añadir</button>
+        </form>
+        <ul id="lista-tareas" class="lista tareas"></ul>
+        <p class="pista">Extra: haz clic en una tarea para tacharla.</p>
+      </section>
+    </main>
+
+    <script type="module" src="ejercicios.js"></script>
+    <script type="module" src="comprobador.js"></script>
+  </body>
+</html>
