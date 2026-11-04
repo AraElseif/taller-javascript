@@ -24,7 +24,13 @@ document.querySelector('#intro').classList.add('destacado');
 // -------------------------------------------------------------
 const frutas = ['Manzana', 'Plátano', 'Uvas', 'Naranja'];
 // Escribe tu código aquí
+const lista = document.querySelector('#lista-frutas');
 
+frutas.forEach((fruta) => {
+    const elemento = document.createElement('li');
+    elemento.textContent = fruta;
+    lista.append(elemento);
+});
 // -------------------------------------------------------------
 // Ejercicio 4 · Contador
 // - Al hacer clic en #btn-sumar, el número de #contador sube 1.
