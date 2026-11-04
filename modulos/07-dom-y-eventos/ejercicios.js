@@ -17,7 +17,7 @@ document.querySelector('#titulo').textContent = '¡Hola, DOM!';
 // Añade la clase "destacado" al párrafo #intro.
 // -------------------------------------------------------------
 // Escribe tu código aquí
-
+document.querySelector('#intro').classList.add('destacado');
 // -------------------------------------------------------------
 // Ejercicio 3 · Pintar una lista
 // Crea un <li> por cada fruta del array y mételo en #lista-frutas.
