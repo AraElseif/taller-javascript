@@ -27,6 +27,11 @@ export function sumarHasta(n) {
 // -------------------------------------------------------------
 export function factorial(n) {
   // Escribe tu código aquí
+let resultado = 1;
+for (let numero = 2; numero <= n; numero++) {
+  resultado *= numero;
+}
+return resultado;
 }
 
 // -------------------------------------------------------------
