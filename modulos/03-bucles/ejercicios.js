@@ -59,6 +59,11 @@ export function contarVocales(texto) {
 // -------------------------------------------------------------
 export function invertirTexto(texto) {
   // Escribe tu código aquí
+  let invertido = '';
+  for (let i = texto.length - 1; i >= 0; i--) {
+    invertido += texto[i];
+  }
+  return invertido;
 }
 
 // -------------------------------------------------------------
