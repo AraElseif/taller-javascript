@@ -46,6 +46,7 @@ export function saludar(nombre, ciudad) {
 // -------------------------------------------------------------
 export function precioConIva(precio) {
   // Escribe tu código aquí
+  return Math.round(precio * 1.21 * 100) / 100;
 }
 
 // -------------------------------------------------------------
