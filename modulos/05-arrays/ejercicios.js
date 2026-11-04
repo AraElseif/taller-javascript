@@ -12,6 +12,7 @@
 // -------------------------------------------------------------
 export function primeroYUltimo(lista) {
   // Escribe tu código aquí
+  return [lista[0], lista [lista.length - 1]];
 }
 
 // -------------------------------------------------------------
