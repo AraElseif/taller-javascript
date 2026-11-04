@@ -58,7 +58,13 @@ document.querySelector('#btn-reiniciar').addEventListener('click', () => {
 // Pista: evento 'input' y .trim()
 // -------------------------------------------------------------
 // Escribe tu código aquí
+const inputNombre = document.querySelector('#input-nombre');
+const saludo = document.querySelector('#saludo');
 
+inputNombre.addEventListener('input', () => {
+    const nombre = inputNombre.value.trim();
+    saludo.textContent = nombre ? `Hola, ${nombre}` : 'Hola, desconocido';
+});
 // -------------------------------------------------------------
 // Ejercicio 6 · Modo oscuro
 // Al hacer clic en #btn-tema, pon o quita la clase "oscuro" del <body>.
