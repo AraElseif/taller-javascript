@@ -81,6 +81,24 @@ export function accesoPermitido(esAdmin, esPropietario, estaBloqueado) {
 // -------------------------------------------------------------
 export function nombreDelDia(numero) {
   // Escribe tu código aquí
+  switch (numero) {
+    case 1:
+      return 'lunes';
+    case 2:
+      return 'martes';
+    case 3:
+      return 'miércoles';
+    case 4:
+      return 'jueves';
+    case 5:
+      return 'viernes';
+    case 6:
+      return 'sabado';
+    case 7:
+      return 'domingo';
+    default:
+      return 'desconocido';
+  }
 }
 
 // -------------------------------------------------------------
