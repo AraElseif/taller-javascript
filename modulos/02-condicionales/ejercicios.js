@@ -130,6 +130,7 @@ export function fizzBuzz(numero) {
 // -------------------------------------------------------------
 export function signo(numero) {
   // Escribe tu código aquí
+  return numero > 0 ? 'positivo': numero < 0 ? 'negativo' : 'cero';
 }
 
 // -------------------------------------------------------------
