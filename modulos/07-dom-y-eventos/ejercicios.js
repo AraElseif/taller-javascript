@@ -11,7 +11,7 @@
 // Cambia el texto del elemento #titulo por: ¡Hola, DOM!
 // -------------------------------------------------------------
 // Escribe tu código aquí
-
+document.querySelector('#titulo').textContent = '¡Hola, DOM!';
 // -------------------------------------------------------------
 // Ejercicio 2 · Destacar un párrafo
 // Añade la clase "destacado" al párrafo #intro.
