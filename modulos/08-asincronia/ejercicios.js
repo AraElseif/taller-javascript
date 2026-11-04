@@ -56,6 +56,9 @@ export async function contarPosts(usuarioId) {
 // -------------------------------------------------------------
 export function esperar(ms) {
   // Escribe tu código aquí
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
 }
 
 // -------------------------------------------------------------
