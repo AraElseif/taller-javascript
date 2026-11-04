@@ -41,6 +41,7 @@ export function soloPares(numeros) {
 // -------------------------------------------------------------
 export function nombresEnMayusculas(nombres) {
   // Escribe tu código aquí
+  return nombres.map((nombre) => nombre.toUpperCase());
 }
 
 // -------------------------------------------------------------
