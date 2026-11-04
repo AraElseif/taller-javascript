@@ -70,6 +70,7 @@ export function precioEntrada(edad) {
 // -------------------------------------------------------------
 export function accesoPermitido(esAdmin, esPropietario, estaBloqueado) {
   // Escribe tu código aquí
+  return (esAdmin || esPropietario) && !estaBloqueado;
 }
 
 // -------------------------------------------------------------
