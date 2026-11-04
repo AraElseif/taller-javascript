@@ -115,6 +115,11 @@ export function contarDigitos(n) {
 // -------------------------------------------------------------
 export function cuentaAtras(n) {
   // Escribe tu código aquí
+  let resultado = '';
+  for (let numero = n; numero > 0; numero--) {
+    resultado += (numero === n ? '' : ', ') + numero;
+  }
+  return resultado ? `${resultado}, ¡despegue!` : `¡despegue!`;
 }
 
 // -------------------------------------------------------------
