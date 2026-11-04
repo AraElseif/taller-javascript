@@ -59,6 +59,7 @@ export function precioConIva(precio) {
 // -------------------------------------------------------------
 export function esPar(numero) {
   // Escribe tu código aquí
+  return numero % 2 === 0;
 }
 
 // -------------------------------------------------------------
