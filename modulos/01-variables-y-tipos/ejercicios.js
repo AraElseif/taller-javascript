@@ -94,6 +94,7 @@ export function sumarTextos(a, b) {
 // -------------------------------------------------------------
 export function normalizarEmail(email) {
   // Escribe tu código aquí
+  return email.trim().toLowerCase();
 }
 
 // =============================================================
