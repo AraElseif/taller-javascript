@@ -77,6 +77,15 @@ export function invertirTexto(texto) {
 // -------------------------------------------------------------
 export function esPrimo(n) {
   // Escribe tu código aquí
+  if (n < 2) {
+    return false;
+  }
+  for (let divisor = 2; divisor < n; divisor++) {
+    if (n % divisor === 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
 // -------------------------------------------------------------
@@ -88,6 +97,15 @@ export function esPrimo(n) {
 // -------------------------------------------------------------
 export function contarDigitos(n) {
   // Escribe tu código aquí
+  if (n === 0) {
+    return 1;
+  }
+  let cantidad = 0;
+  while (n > 0) {
+    cantidad++;
+    n = Math.floor(n / 10);
+  }
+  return cantidad;
 }
 
 // -------------------------------------------------------------
