@@ -71,7 +71,9 @@ inputNombre.addEventListener('input', () => {
 // Pista: document.body y classList.toggle
 // -------------------------------------------------------------
 // Escribe tu código aquí
-
+document.querySelector('#btn-tema').addEventListener('click', () => {
+    document.body.classList.toggle('oscuro');
+});
 // -------------------------------------------------------------
 // Ejercicio 7 · Lista de tareas
 // Al enviar el formulario #form-tarea:
