@@ -132,6 +132,16 @@ export function cuentaAtras(n) {
 // -------------------------------------------------------------
 export function dibujarEscalera(n) {
   // Escribe tu código aquí
+  let escalera = '';
+  for (let peldaño = 1; peldaño <= n; peldaño++) {
+    for (let bloque = 1; bloque <= peldaño; bloque++) {
+      escalera += '#';
+    }
+    if (peldaño < n) {
+      escalera += '\n';
+    }
+  }
+  return escalera;
 }
 
 // =============================================================
