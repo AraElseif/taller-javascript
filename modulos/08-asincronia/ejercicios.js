@@ -44,6 +44,8 @@ export async function nombreOAnonimo(id) {
 // -------------------------------------------------------------
 export async function contarPosts(usuarioId) {
   // Escribe tu código aquí
+  const posts = await obtenerPosts(usuarioId);
+  return posts.length;
 }
 
 // -------------------------------------------------------------
