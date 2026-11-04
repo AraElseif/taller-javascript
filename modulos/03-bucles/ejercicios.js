@@ -43,6 +43,13 @@ return resultado;
 // -------------------------------------------------------------
 export function contarVocales(texto) {
   // Escribe tu código aquí
+  let cantidad = 0;
+  for (const letra of texto.toLowerCase()) {
+    if ('aeiou'.includes(letra)) {
+      cantidad++;
+    }
+  }
+  return cantidad;
 }
 
 // -------------------------------------------------------------
