@@ -9,7 +9,7 @@
 // y devuelva su triple.
 //   triple(4) → 12
 // -------------------------------------------------------------
-export const triple = null;
+export const triple = (numero) => numero * 3;
 
 // -------------------------------------------------------------
 // Ejercicio 2 · Valor por defecto
