@@ -38,7 +38,18 @@ frutas.forEach((fruta) => {
 // Pista: guarda la cuenta en una variable con let.
 // -------------------------------------------------------------
 // Escribe tu código aquí
+let cuenta = 0;
+const contador = document.querySelector('#contador');
 
+document.querySelector('#btn-sumar').addEventListener('click', () => {
+    cuenta++;
+    contador.textContent = cuenta;
+});
+
+document.querySelector('#btn-reiniciar').addEventListener('click', () => {
+    cuenta = 0;
+    contador.textContent = cuenta;
+});
 // -------------------------------------------------------------
 // Ejercicio 5 · Saludo en directo
 // Mientras el usuario escribe en #input-nombre, #saludo debe mostrar:
