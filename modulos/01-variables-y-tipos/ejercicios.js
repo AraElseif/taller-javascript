@@ -34,6 +34,7 @@ export function tipoDe(string) {
 // -------------------------------------------------------------
 export function saludar(nombre, ciudad) {
   // Escribe tu código aquí
+  return `Hola, soy ${nombre} y vivo en ${ciudad}.`;
 }
 
 // -------------------------------------------------------------
