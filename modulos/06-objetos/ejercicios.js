@@ -85,6 +85,7 @@ export function buscarPorId(proyectos, id) {
 // -------------------------------------------------------------
 export function tecnologiasUnicas(proyectos) {
   // Escribe tu código aquí
+  return [...new Set(proyectos.flatMap((proyecto) => proyecto.tecnologias))].sort();
 }
 
 // -------------------------------------------------------------
@@ -96,6 +97,7 @@ export function tecnologiasUnicas(proyectos) {
 // -------------------------------------------------------------
 export function cumplirAnios(persona) {
   // Escribe tu código aquí
+  return {...persona, edad: persona.edad + 1};
 }
 
 // -------------------------------------------------------------
@@ -106,6 +108,7 @@ export function cumplirAnios(persona) {
 // -------------------------------------------------------------
 export function contarPorTecnologia(proyectos) {
   // Escribe tu código aquí
+  
 }
 
 // -------------------------------------------------------------
