@@ -49,6 +49,15 @@ export function calificar(nota) {
 // -------------------------------------------------------------
 export function precioEntrada(edad) {
   // Escribe tu código aquí
+  if (edad < 4) {
+    return 0;
+  } else if (edad <= 17) {
+    return 5;
+  } else if (edad >= 65) {
+    return 6;
+  } else {
+    return 10;
+  }
 }
 
 // -------------------------------------------------------------
