@@ -11,8 +11,8 @@
 //   - esEstudiante:  un BOOLEANO (true o false)
 // Ojo: ahora mismo alguna tiene trampa.
 // -------------------------------------------------------------
-export const nombre = '';
-export const edad = '25';
+export const nombre = 'Pedro';
+export const edad = '36';
 export const esEstudiante = 'true';
 
 // -------------------------------------------------------------
