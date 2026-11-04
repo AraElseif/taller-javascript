@@ -16,6 +16,8 @@ import { obtenerUsuario, obtenerPosts } from './api-falsa.js';
 // -------------------------------------------------------------
 export async function nombreDeUsuario(id) {
   // Escribe tu código aquí
+  const usuario = await obtenerUsuario(id);
+  return usuario.nombre;
 }
 
 // -------------------------------------------------------------
