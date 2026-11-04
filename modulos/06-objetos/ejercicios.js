@@ -73,6 +73,7 @@ export function filtrarPorTecnologia(proyectos, tecnologia) {
 // -------------------------------------------------------------
 export function buscarPorId(proyectos, id) {
   // Escribe tu código aquí
+  return proyectos.find((proyecto) => proyecto.id === id) ?? null;
 }
 
 // -------------------------------------------------------------
