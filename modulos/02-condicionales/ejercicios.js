@@ -143,6 +143,7 @@ export function signo(numero) {
 // -------------------------------------------------------------
 export function esBisiesto(anio) {
   // Escribe tu código aquí
+  return anio % 400 === 0 || (anio % 4 === 0 && anio % 100 !== 0);
 }
 
 // =============================================================
