@@ -18,8 +18,9 @@ export const triple = (numero) => numero * 3;
 //   saludo()      → 'Hola, invitado'
 // Pista: puedes cambiar la línea de los parámetros.
 // -------------------------------------------------------------
-export function saludo(nombre) {
+export function saludo(nombre = 'invitado') {
   // Escribe tu código aquí
+  return `Hola, ${nombre}`;
 }
 
 // -------------------------------------------------------------
@@ -31,6 +32,7 @@ export function saludo(nombre) {
 // -------------------------------------------------------------
 export function aplicar(fn, valor) {
   // Escribe tu código aquí
+  return fn(valor);
 }
 
 // -------------------------------------------------------------
@@ -42,6 +44,11 @@ export function aplicar(fn, valor) {
 // -------------------------------------------------------------
 export function aplicarNVeces(fn, n, valor) {
   // Escribe tu código aquí
+  let resultado = valor;
+  for (let i = 0; i < n; i++) {
+    resultado = fn(resultado);
+  }
+  return resultado;
 }
 
 // -------------------------------------------------------------
@@ -54,6 +61,7 @@ export function aplicarNVeces(fn, n, valor) {
 // -------------------------------------------------------------
 export function crearMultiplicador(factor) {
   // Escribe tu código aquí
+  return (numero) => numero * factor;
 }
 
 // -------------------------------------------------------------
@@ -67,6 +75,11 @@ export function crearMultiplicador(factor) {
 // -------------------------------------------------------------
 export function crearContador() {
   // Escribe tu código aquí
+  let cuenta = 0;
+  return () => {
+    cuenta++;
+    return cuenta;
+  };
 }
 
 // -------------------------------------------------------------
@@ -77,6 +90,7 @@ export function crearContador() {
 // -------------------------------------------------------------
 export function componer(f, g) {
   // Escribe tu código aquí
+  return (x) => f(g(x));
 }
 
 // -------------------------------------------------------------
@@ -90,6 +104,15 @@ export function componer(f, g) {
 // -------------------------------------------------------------
 export function unaSolaVez(fn) {
   // Escribe tu código aquí
+  let yaSeEjecuto = false;
+  let resultado;
+  return (...argumentos) => {
+    if (!yaSeEjecuto) {
+      resultado = fn(...argumentos);
+      yaSeEjecuto = true;
+    }
+    return resultado;
+  };
 }
 
 // =============================================================
