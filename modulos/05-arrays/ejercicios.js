@@ -52,6 +52,7 @@ export function nombresEnMayusculas(nombres) {
 // -------------------------------------------------------------
 export function primeroMayorQue(numeros, limite) {
   // Escribe tu código aquí
+  return numeros.find((numero) => numero > limite);
 }
 
 // -------------------------------------------------------------
@@ -61,6 +62,7 @@ export function primeroMayorQue(numeros, limite) {
 // -------------------------------------------------------------
 export function hayNegativos(numeros) {
   // Escribe tu código aquí
+  return numeros.some((numero) => numero < 0);
 }
 
 // -------------------------------------------------------------
@@ -70,6 +72,7 @@ export function hayNegativos(numeros) {
 // -------------------------------------------------------------
 export function sumarTodos(numeros) {
   // Escribe tu código aquí
+  return numeros.reduce((suma, numero) => suma + numero, 0);
 }
 
 // -------------------------------------------------------------
@@ -81,6 +84,7 @@ export function sumarTodos(numeros) {
 // -------------------------------------------------------------
 export function ordenarSinTocar(numeros) {
   // Escribe tu código aquí
+  return [...numeros].sort((a, b) => a - b);
 }
 
 // -------------------------------------------------------------
@@ -90,6 +94,7 @@ export function ordenarSinTocar(numeros) {
 // -------------------------------------------------------------
 export function sinDuplicados(lista) {
   // Escribe tu código aquí
+  return [...new Set(lista)];
 }
 
 // -------------------------------------------------------------
@@ -101,6 +106,10 @@ export function sinDuplicados(lista) {
 // -------------------------------------------------------------
 export function palabrasLargas(frase, minimo) {
   // Escribe tu código aquí
+  return frase
+  .split(' ')
+  .filter((palabra) => palabra.length >= minimo)
+  .join(' ');
 }
 
 // =============================================================
