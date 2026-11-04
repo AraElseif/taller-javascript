@@ -12,6 +12,11 @@
 // -------------------------------------------------------------
 export function sumarHasta(n) {
   // Escribe tu código aquí
+  let suma = 0;
+  for (let numero = 1; numero <= n; numero++) {
+    suma += numero;
+  }
+  return suma;
 }
 
 // -------------------------------------------------------------
