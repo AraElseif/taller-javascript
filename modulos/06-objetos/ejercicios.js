@@ -17,6 +17,7 @@ export const proyectosDeEjemplo = [
 // -------------------------------------------------------------
 export function crearPersona(nombre, edad) {
   // Escribe tu código aquí
+  return { nombre: nombre, edad: edad};
 }
 
 // -------------------------------------------------------------
