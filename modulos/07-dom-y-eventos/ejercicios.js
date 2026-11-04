@@ -106,3 +106,8 @@ formulario.addEventListener('submit', (evento) => {
 // Pista: delegación de eventos (mira el README).
 // -------------------------------------------------------------
 // Escribe tu código aquí
+listaTareas.addEventListener('click', (evento) => {
+    if (evento.target.matches('li')) {
+        evento.target.classList.toggle('completada');
+    }
+});
