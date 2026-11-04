@@ -83,6 +83,7 @@ export function formatearDuracion(segundos) {
 // -------------------------------------------------------------
 export function sumarTextos(a, b) {
   // Escribe tu código aquí
+  return Number(a) + Number(b);
 }
 
 // -------------------------------------------------------------
