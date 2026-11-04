@@ -29,6 +29,12 @@ export async function nombreDeUsuario(id) {
 // -------------------------------------------------------------
 export async function nombreOAnonimo(id) {
   // Escribe tu código aquí
+  try {
+    const usuario = await obtenerUsuario(id);
+    return usuario.nombre;
+  } catch {
+    return 'Anónimo';
+  }
 }
 
 // -------------------------------------------------------------
