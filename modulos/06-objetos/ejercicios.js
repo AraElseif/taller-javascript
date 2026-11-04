@@ -49,6 +49,7 @@ export function contarPropiedades(objeto) {
 // -------------------------------------------------------------
 export function titulos(proyectos) {
   // Escribe tu código aquí
+  return proyectos.map((proyecto) => proyecto.titulo);
 }
 
 // -------------------------------------------------------------
