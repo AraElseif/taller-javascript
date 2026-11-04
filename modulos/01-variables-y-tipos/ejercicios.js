@@ -71,6 +71,9 @@ export function esPar(numero) {
 // -------------------------------------------------------------
 export function formatearDuracion(segundos) {
   // Escribe tu código aquí
+  const minutos = Math.floor(segundos / 60);
+  const segundosRestantes = segundos % 60;
+  return `${minutos} min ${segundosRestantes} s`;
 }
 
 // -------------------------------------------------------------
