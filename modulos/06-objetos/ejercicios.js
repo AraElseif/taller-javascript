@@ -39,6 +39,7 @@ export function presentar(persona) {
 // -------------------------------------------------------------
 export function contarPropiedades(objeto) {
   // Escribe tu código aquí
+  return Object.keys(objeto).length;
 }
 
 // -------------------------------------------------------------
