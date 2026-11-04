@@ -28,6 +28,8 @@ export function crearPersona(nombre, edad) {
 // -------------------------------------------------------------
 export function presentar(persona) {
   // Escribe tu código aquí
+  const { nombre, edad} = persona;
+  return `Me llamo ${nombre} y tengo ${edad} años.`;
 }
 
 // -------------------------------------------------------------
