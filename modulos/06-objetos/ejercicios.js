@@ -59,6 +59,9 @@ export function titulos(proyectos) {
 // -------------------------------------------------------------
 export function filtrarPorTecnologia(proyectos, tecnologia) {
   // Escribe tu código aquí
+  return proyectos.filter((proyecto) =>
+    proyecto.tecnologias.includes(tecnologia)
+  );
 }
 
 // -------------------------------------------------------------
