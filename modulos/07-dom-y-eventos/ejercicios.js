@@ -83,7 +83,21 @@ document.querySelector('#btn-tema').addEventListener('click', () => {
 //   3. Vacía el input.
 // -------------------------------------------------------------
 // Escribe tu código aquí
+const formulario = document.querySelector('#form-tarea');
+const inputTarea = document.querySelector('#input-tarea');
+const listaTareas = document.querySelector('#lista-tareas');
 
+formulario.addEventListener('submit', (evento) => {
+    evento.preventDefault();
+    const tarea = inputTarea.value.trim();
+
+    if (tarea !=='') {
+        const elemento = document.createElement('li');
+        elemento.textContent = tarea;
+        listaTareas.append(elemento);
+    }
+    inputTarea.value = '';
+});
 // -------------------------------------------------------------
 // Ejercicio 8 · Tachar tareas (extra)
 // Al hacer clic en cualquier tarea de #lista-tareas, pon o quita la
