@@ -31,6 +31,7 @@ export function dobles(numeros) {
 // -------------------------------------------------------------
 export function soloPares(numeros) {
   // Escribe tu código aquí
+  return numeros.filter((numero) => numero % 2 === 0);
 }
 
 // -------------------------------------------------------------
