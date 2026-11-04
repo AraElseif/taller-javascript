@@ -13,7 +13,7 @@
 // -------------------------------------------------------------
 export const nombre = 'Pedro';
 export const edad = 36;
-export const esEstudiante = 'true';
+export const esEstudiante = true;
 
 // -------------------------------------------------------------
 // Ejercicio 2 · ¿De qué tipo es?
