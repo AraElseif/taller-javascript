@@ -26,6 +26,17 @@ export function esMayorDeEdad(edad) {
 // -------------------------------------------------------------
 export function calificar(nota) {
   // Escribe tu código aquí
+  if (nota < 0 || nota > 10) {
+    return 'Nota no válida';
+  } else if (nota >= 9) {
+    return 'Sobresaliente';
+  } else if (nota >= 7) {
+    return 'Notable';
+  } else if (nota >= 5) {
+    return 'Aprobado';
+  } else {
+    return 'Suspenso';
+  }
 }
 
 // -------------------------------------------------------------
