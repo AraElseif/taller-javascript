@@ -22,6 +22,7 @@ export function primeroYUltimo(lista) {
 // -------------------------------------------------------------
 export function dobles(numeros) {
   // Escribe tu código aquí
+  return numeros.map((numero) => numero * 2);
 }
 
 // -------------------------------------------------------------
