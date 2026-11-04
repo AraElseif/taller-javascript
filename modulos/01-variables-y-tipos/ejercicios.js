@@ -22,8 +22,9 @@ export const esEstudiante = true;
 //   tipoDe(42)     → 'number'
 // Pista: typeof
 // -------------------------------------------------------------
-export function tipoDe(valor) {
+export function tipoDe(string) {
   // Escribe tu código aquí
+  return typeof string;
 }
 
 // -------------------------------------------------------------
